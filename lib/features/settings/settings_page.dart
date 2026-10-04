@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:material_3_expressive/material_3_expressive.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -8,7 +9,7 @@ import '../../core/system/privilege.dart';
 import '../../core/widgets/dialogs.dart';
 import '../../core/widgets/states.dart';
 
-const String kAppVersion = '1.0.4';
+const String kAppVersion = '1.0.5';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -237,9 +238,22 @@ class _SettingsPageState extends State<SettingsPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('$kAppName  ·  $kAppTamilName', style: text.headlineSmall),
-          const SizedBox(height: 4),
-          Text('Version $kAppVersion', style: text.bodyMedium?.copyWith(color: scheme.onSurfaceVariant)),
+          Row(
+            children: <Widget>[
+              SvgPicture.asset('assets/logo/kalanjiyam.svg', width: 64, height: 64),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text('$kAppName  ·  $kAppTamilName', style: text.headlineSmall),
+                    const SizedBox(height: 4),
+                    Text('Version $kAppVersion', style: text.bodyMedium?.copyWith(color: scheme.onSurfaceVariant)),
+                  ],
+                ),
+              ),
+            ],
+          ),
           const SizedBox(height: 12),
           Text(
             '"Kalanjiyam" is Tamil for a storehouse or treasury: one place to look after your '
@@ -254,8 +268,15 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 12),
           M3EButton.text(
-            onPressed: () =>
-                showLicensePage(context: context, applicationName: kAppName, applicationVersion: kAppVersion),
+            onPressed: () => showLicensePage(
+              context: context,
+              applicationName: kAppName,
+              applicationVersion: kAppVersion,
+              applicationIcon: Padding(
+                padding: const EdgeInsets.all(8),
+                child: SvgPicture.asset('assets/logo/kalanjiyam.svg', width: 56, height: 56),
+              ),
+            ),
             child: const Text('Open-source licences'),
           ),
         ],

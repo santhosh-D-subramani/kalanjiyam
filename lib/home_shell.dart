@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:material_3_expressive/material_3_expressive.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -127,23 +128,9 @@ class _AppMark extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ColorScheme scheme = Theme.of(context).colorScheme;
     return Tooltip(
       message: '$kAppName · $kAppTamilName',
-      child: Container(
-        width: 48,
-        height: 48,
-        alignment: Alignment.center,
-        decoration: ShapeDecoration(
-          color: scheme.primaryContainer,
-          shape: const StarBorder(points: 9, innerRadiusRatio: 0.86, pointRounding: 0.9),
-        ),
-        child: Text(
-          'க',
-          style: Theme.of(context).textTheme.titleLarge
-              ?.copyWith(color: scheme.onPrimaryContainer, fontWeight: FontWeight.w700),
-        ),
-      ),
+      child: SvgPicture.asset('assets/logo/kalanjiyam.svg', width: 48, height: 48),
     );
   }
 }

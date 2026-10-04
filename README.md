@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/logo/kalanjiyam-256.png" width="128" alt="Kalanjiyam logo"></p>
+
 # Kalanjiyam · களஞ்சியம்
 
 *Kalanjiyam* means "storehouse" in Tamil. It is a Material 3 Expressive system manager for Linux that covers
@@ -13,6 +15,17 @@ installed packages, desktop launchers and disk space in one place.
 Root is used only for system package removal, system cache cleaning and package-owned launchers. Kalanjiyam
 uses `pkexec` when a polkit agent is running; otherwise it asks for your password and passes it to `sudo`
 through a pipe. The password is never stored or logged. Kalanjiyam works offline and sends no telemetry.
+
+## Install
+Download `kalanjiyam-<version>-linux-x64.tar.gz` from the [Releases](https://github.com/santhosh-D-subramani/kalanjiyam/releases) page, then:
+
+```sh
+tar xf kalanjiyam-*-linux-x64.tar.gz
+cd kalanjiyam-*-linux-x64
+./install.sh            # adds Kalanjiyam to your app launcher (no root needed)
+```
+
+Needs GTK 3 (installed on practically every Linux desktop).
 
 ## Build
 Requires Flutter ≥ 3.47 (Dart ≥ 3.13) and the usual Linux desktop build dependencies.

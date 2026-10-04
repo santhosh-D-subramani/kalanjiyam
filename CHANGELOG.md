@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.5
+
+- New app logo: the Tamil letter க on a Material 3 Expressive shape, used for the window icon,
+  navigation rail, About section, licence page and desktop icon.
+- `install.sh` also works from the release archive and installs a 256 px icon.
+
 ## 1.0.4
 
 - Released under the MIT License.
