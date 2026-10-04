@@ -1,0 +1,27 @@
+[Desktop Entry]
+Type=Application
+Name=Kalanjiyam
+Name[ta]=களஞ்சியம்
+GenericName=System Manager
+Comment=Manage installed packages, app launchers and disk space
+Comment[ta]=நிறுவிய தொகுப்புகள், செயலி துவக்கிகள், சேமிப்பகம் ஆகியவற்றை நிர்வகிக்கவும்
+Exec=kalanjiyam
+Icon=com.santhoshDsubramani.kalanjiyam
+Terminal=false
+Categories=Settings;PackageManager;
+Keywords=packages;pacman;flatpak;apt;launcher;desktop;storage;disk;cache;cleaner;
+StartupNotify=true
+StartupWMClass=com.santhoshDsubramani.kalanjiyam
+Actions=packages;launchers;storage;
+
+[Desktop Action packages]
+Name=Packages
+Exec=kalanjiyam --page=packages
+
+[Desktop Action launchers]
+Name=Launchers
+Exec=kalanjiyam --page=launchers
+
+[Desktop Action storage]
+Name=Storage
+Exec=kalanjiyam --page=storage
