@@ -8,7 +8,7 @@ import '../../core/system/privilege.dart';
 import '../../core/widgets/dialogs.dart';
 import '../../core/widgets/states.dart';
 
-const String kAppVersion = '1.0.3';
+const String kAppVersion = '1.0.4';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});

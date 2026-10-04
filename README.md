@@ -33,3 +33,7 @@ The desktop file and icon live in `linux/packaging/` for distro packagers
 (application ID `com.santhoshDsubramani.kalanjiyam`).
 
 Run `kalanjiyam --page=storage` (or `packages`, `launchers`, `settings`) to open a section directly.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

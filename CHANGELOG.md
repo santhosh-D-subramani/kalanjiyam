@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- Released under the MIT License.
+
 ## 1.0.3
 
 - Set the application ID to `com.santhoshDsubramani.kalanjiyam`.
